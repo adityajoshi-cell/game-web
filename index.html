@@ -3,52 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Sea Dder</title>
+    <title>Deep Sea Dodger | Naval Command</title>
+    <style>
+        /* Military & Ocean Aesthetic */
+        :root {
+            --ocean-blue: #001d3d;
+            --sonar-green: #00ff41;
+            --steel-gray: #333d42;
+            --text-light: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--ocean-blue);
+            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            line-height: 1.6;
+            background: linear-gradient(180deg, #001d3d 0%, #000814 100%);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid var(--steel-gray);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+        }
+
+        /* Tactical Header */
+        header {
+            border-bottom: 2px solid var(--sonar-green);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            color: var(--sonar-green);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        h2, h3, h4 {
+            color: var(--sonar-green);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            margin-top: 25px;
+            border-left: 4px solid var(--sonar-green);
+            padding-left: 10px;
+        }
+
+        /* Content Styling */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .controls-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px dashed var(--steel-gray);
+        }
+
+        .key-tag {
+            color: var(--sonar-green);
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--steel-gray);
+            border-top: 1px solid var(--steel-gray);
+            padding-top: 10px;
+        }
+
+        /* Game Placeholder */
+        #game-placeholder {
+            width: 100%;
+            height: 300px;
+            background: #000;
+            border: 2px solid #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            color: var(--sonar-green);
+            font-weight: bold;
+            text-shadow: 0 0 5px var(--sonar-green);
+        }
+    </style>
 </head>
 <body>
 
-<h1>Description </h1>    
+    <div class="container">
+        <header>
+            <h1>DEEP SEA DODGER: TACTICAL BRIEF</h1>
+        </header>
 
-<p> The purpose of this game is for the user to dodge different obstacles(sea mines) while operating a submarine. There is 
-    no end of the game. The objective is to dodge as long as possible and earn more points before getting destroyed. The speed of
-     the mines coming at the sub increases over time 
+        <section id="description">
+            <h2>Description</h2>
+            <p>
+                The purpose of this game is for the user to dodge different obstacles (sea mines) while operating a submarine. 
+                There is no end of the game. The objective is to dodge as long as possible and earn more points before getting destroyed. 
+                The speed of the mines coming at the sub increases over time.
+            </p>
+            <p>
+                I decided to make a project like this because I am interested in the navy and armed forces in general. 
+                I also play a lot of war games and have a lot of models, some of which with Lego, that are themed to the military 
+                and the armed forces. I decided to make this to show my own interests in this type of game and to see what 
+                interesting things that I could make with the help of an LLM.
+            </p>
+        </section>
 
-    I decided to make a project like this because I am interested in the navy and armed forces in general. I also play a lot of 
-    war games and have a lot of models, some of which with lego, that are themed to the military and the armed forces. 
-    I decided to make this to show my own interests in this type of game and to see what interesting things that 
-    I could make with the help of an LLM 
-</p> 
+        <div id="game-placeholder">
+            [ GAME SYSTEM READY FOR DEPLOYMENT ]
+        </div>
 
-<h2>Instructions  </h2>  
+        <section id="instructions">
+            <h2>Instructions</h2>
+            <p>The user controls the movement of the submarine with the arrow keys of their computer. They use these controls to dodge the incoming mines and to survive for as long as possible.</p>
+            
+            <div class="controls-box">
+                <p><span class="key-tag">UP ARROW</span> - Moves the submarine up near the surface to dodge the mines that are coming at it and allows the user to move the sub to a safer spot near the top of the screen.</p>
+                
+                <p><span class="key-tag">DOWN ARROW</span> - It moves the submarine down near the bottom to dodge any mines that are coming straight at it to go to an open position available at the bottom of the screen.</p>
+                
+                <p><span class="key-tag">LEFT ARROW</span> - It is used to go backwards so that you can go back to an empty position that the player could have missed before.</p>
+                
+                <p><span class="key-tag">RIGHT ARROW</span> - The arrow moves the submarine forward. It could be used for going forward to go to any available space that they have.</p>
+            </div>
+        </section>
 
-<p> The user controls the movement of the submarine wit the arrow keys of their computer. They use these controls to 
-    dodge the incoming mines and to survive for as long as possible. 
-     
-Up arrow- Moves the submarine up near the surface to dodge the mines that are coming at it and 
-allows the user to move the sub to a safer spot near the top of the screen 
+        <section id="llm-assistance">
+            <h4>LLM Assistance</h4>
+            <p>
+                The use of an LLM helped me to easily put the ideas that I had in my head through code to make a game. 
+                It helped me save time as it was very efficient. It generated code faster and simplified my code, 
+                helping me to move some aspects of the code around to make it easier to understand. It also added 
+                comments that helped me in understanding the code better. While I used an LLM to help with aspects of my code, 
+                I did not use it for brainstorming and made the idea myself.
+            </p>
+        </section>
 
-Down Arrow- It moves the submarine down near the bottom to dodge any mines that are coming straight at it to go to
-an open position available at the bottom of the screen
-
-Left arrow- It is used to go backwards so that you can go back to an empty position that the player could have missed before 
-
-Right arrow- The arrow moves the submarine forward. It could be used for going forward to go to any available space that they have
-
-</p> 
-
-<h3>Learning goal</h3>  
-
-<p> </p> 
-
-<h4>LLM assistance</h4>   
-
-<p> The use of an LLM helped me to easily put the ideas that I had in my head through code to make a game. It helped me save time 
-    as it was very efficient. It helped me save a lot of time as it generated code faster and simplified my code and helped me to
-     move some aspects of the code around to make it easier to understand. It also added comments that helped me in understanding the 
-     code better. While I used an LLM to help with aspects of my code, I did not use it for brainstorming and made the idea myself and 
-     how it would look like.
-    
-</p> 
+        <footer>
+            NAVAL SYSTEMS ARCHITECTURE © 2026
+        </footer>
+    </div>
 
 </body>
 </html>
